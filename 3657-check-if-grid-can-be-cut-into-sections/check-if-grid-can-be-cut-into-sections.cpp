@@ -17,12 +17,10 @@ public:
         }); 
         
         int splits = 1;
-        int last_split = -1; 
         int last_end = recs[0][idx+2];
         for (int i = 1; i < recs.size(); i++){
             if (recs[i][idx] >= last_end){
                 splits++;
-                
             }
             last_end = max(last_end, recs[i][idx+2]);
             
