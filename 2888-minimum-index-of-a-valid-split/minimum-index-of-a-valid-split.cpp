@@ -1,12 +1,10 @@
 class Solution {
 public:
     int minimumIndex(vector<int>& nums) {
-
         pair<int, int> dom = {-1, -1}; 
         unordered_map<int, int> fq; 
         int f1 = 0; 
         
-
         for (int num: nums){
             fq[num] ++;
             if (dom.first < fq[num]){
